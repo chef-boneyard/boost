@@ -16,11 +16,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-case node[:platform]
-when "redhat","centos","fedora","scientific","amazon"
+case node.platform_family
+when "rhel","fedora"
   %w{boost boost-devel boost-doc}.each do |pkg|
     package pkg
   end
-when "debian","ubuntu"
+when "debian"
   package "libboost-dev"
 end
