@@ -7,8 +7,8 @@ Vagrant::Config.run do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "opscode-centos-6.3"
-  config.vm.box_url = "https://opscode-vm.s3.amazonaws.com/vagrant/boxes/opscode-centos-6.3.box"
+  config.vm.box = "chef-centos-6.3"
+  config.vm.box_url = "https://chef-vm.s3.amazonaws.com/vagrant/boxes/chef-centos-6.3.box"
 
   config.vm.provision :chef_solo do |chef|
     chef.add_recipe "boost"
@@ -84,7 +84,7 @@ Vagrant::Config.run do |config|
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).
   #
-  # The Opscode Platform uses HTTPS. Substitute your organization for
+  # The Chef Software Platform uses HTTPS. Substitute your organization for
   # ORGNAME in the URL and validation key.
   #
   # If you have your own Chef Server, use the appropriate URL, which may be
@@ -92,11 +92,11 @@ Vagrant::Config.run do |config|
   # validation key to validation.pem.
   #
   # config.vm.provision :chef_client do |chef|
-  #   chef.chef_server_url = "https://api.opscode.com/organizations/ORGNAME"
+  #   chef.chef_server_url = "https://api.chef.io/organizations/ORGNAME"
   #   chef.validation_key_path = "ORGNAME-validator.pem"
   # end
   #
-  # If you're using the Opscode platform, your validator client is
+  # If you're using the Chef Software platform, your validator client is
   # ORGNAME-validator, replacing ORGNAME with your organization name.
   #
   # IF you have your own Chef Server, the default validation client name is
