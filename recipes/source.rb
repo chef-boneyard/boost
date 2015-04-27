@@ -6,13 +6,21 @@ remote_file "#{Chef::Config[:file_cache_path]}/#{node['boost']['file']}" do
   action :create_if_missing
 end
 
+# centos needs python and bzip2
+case node[:platform]
+when "centos"
+  %w{python-devel bzip2-devel}.each do |pkg|
+    package pkg
+  end
+end
+
 bash "install-boost" do
   user "root"
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
   tar xzvf #{node['boost']['file']}
   cd #{node['boost']['build_dir']}
-  ./bootstrap.sh && ./bjam install
+  ./bootstrap.sh && ./b2 install
   EOH
   not_if "/sbin/ldconfig -v | grep boost"
 end
