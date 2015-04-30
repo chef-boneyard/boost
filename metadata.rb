@@ -8,7 +8,9 @@ version          "0.3.0"
 name             "boost"
 provides         "boost"
 recipe           "boost", "Installs libboost-dev"
+recipe           "boost::source", "Installs boost via source tarbal compile."
 
+depends          "apt"
 depends          "build-essential"
 
 supports "ubuntu"

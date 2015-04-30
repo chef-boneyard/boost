@@ -16,6 +16,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+include_recipe "apt"
+
 case node['platform_family']
 when "rhel","fedora"
   %w{boost boost-devel boost-doc}.each do |pkg|

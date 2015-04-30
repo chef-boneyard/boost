@@ -2,48 +2,30 @@
 driver_plugin: vagrant
 
 driver_config:
+  require_chef_omnibus: true
   customize:
-    memory: 1024
+    memory: 4096
+    cpus: 4
 
 platforms:
-
-- name: centos-6
-  driver_config:
-    box: opscode-centos-6.5
-    box_url: http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-6.5_chef-provisionerless.box
-    require_chef_omnibus: latest
-- name: ubuntu-12.04
-  driver_config:
-    box: opscode-ubuntu-12.04
-    box_url: http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.04_chef-provisionerless.box
-    require_chef_omnibus: latest
-- name: ubuntu-12.10
-  driver_config:
-    box: opscode-ubuntu-12.10
-    box_url: http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.10_chef-provisionerless.box
-    require_chef_omnibus: latest
-- name: ubuntu-13.04
-  driver_config:
-    box: opscode-ubuntu-13.04
-    box_url: http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-13.04_chef-provisionerless.box
-    require_chef_omnibus: latest
-- name: ubuntu-13.10
-  driver_config:
-    box: opscode-ubuntu-13.10
-    box_url: http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-13.10_chef-provisionerless.box
-    require_chef_omnibus: latest
-- name: ubuntu-14.04
-  driver_config:
-    box: opscode-ubuntu-14.04
-    box_url: http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-14.04_chef-provisionerless.box
-    require_chef_omnibus: latest
+  - name: opscode-centos-6.5
+  - name: opscode-debian-7.2.0
+  - name: opscode-fedora-19
+  - name: opscode-ubuntu-14.04
 
 suites:
-- name: boost
+- name: default
   run_list:
   - recipe[boost::default]
   attributes: {}
-- name: boost-source
+- name: source
   run_list:
   - recipe[boost::source]
-  attributes: {}
+  attributes: 
+    boost:
+      source:
+        major_ver: "1"
+        minor_ver: "57"
+        patch_ver: "0"
+        file_ext: ".bz2"
+        build_cmd: "./bootstrap.sh && ./b2 -j 4 install"
