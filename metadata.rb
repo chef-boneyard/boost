@@ -4,12 +4,14 @@ maintainer_email "cookbooks@chef.io"
 license          "Apache 2.0"
 description      "Installs libboost"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "0.2.0"
+version          "0.3.0"
 name             "boost"
 provides         "boost"
 recipe           "boost", "Installs libboost-dev"
+recipe           "boost::source", "Installs boost via source tarbal compile."
 
-recommends       "build-essential"
+depends          "apt"
+depends          "build-essential"
 
 supports "ubuntu"
 supports "debian"

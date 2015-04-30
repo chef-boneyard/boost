@@ -1,14 +1,16 @@
 Description
 ===========
 
-Installs boost, mainly to support Thrift.
+Installs the [Boost](http://boost.org) development headers/libraries.
 
 Requirements
 ============
 
 ## Platform:
 
-* Ubuntu 10.04
+* CentOS 
+* Ubuntu
+* Fedora
 
 Usage
 =====
@@ -17,7 +19,15 @@ Include this recipe to install boost development packages.
 
     include_recipe "boost"
 
-Merely installs the libboost-dev package which should grab a bunch of dependencies and get the right thing.
+Merely installs the boost development packages for a particular
+platform. 
+
+Boost can also be built from source by using the following recipe:
+
+    include_recipe "boost::source"
+
+This recipe downloads the tarbal, compiles and installs the boost
+system.
 
 License and Author
 ==================

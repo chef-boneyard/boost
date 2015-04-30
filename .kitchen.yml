@@ -1,0 +1,31 @@
+---
+driver_plugin: vagrant
+
+driver_config:
+  require_chef_omnibus: true
+  customize:
+    memory: 4096
+    cpus: 4
+
+platforms:
+  - name: opscode-centos-6.5
+  - name: opscode-debian-7.2.0
+  - name: opscode-fedora-19
+  - name: opscode-ubuntu-14.04
+
+suites:
+- name: default
+  run_list:
+  - recipe[boost::default]
+  attributes: {}
+- name: source
+  run_list:
+  - recipe[boost::source]
+  attributes: 
+    boost:
+      source:
+        major_ver: "1"
+        minor_ver: "57"
+        patch_ver: "0"
+        file_ext: ".bz2"
+        build_cmd: "./bootstrap.sh && ./b2 -j 4 install"
