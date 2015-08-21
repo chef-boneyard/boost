@@ -7,14 +7,13 @@ Vagrant::Config.run do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "chef-centos-6.3"
-  config.vm.box_url = "https://chef-vm.s3.amazonaws.com/vagrant/boxes/chef-centos-6.3.box"
+  config.vm.box = 'chef-centos-6.3'
+  config.vm.box_url = 'https://chef-vm.s3.amazonaws.com/vagrant/boxes/chef-centos-6.3.box'
 
   config.vm.provision :chef_solo do |chef|
-    chef.add_recipe "boost"
-    chef.add_recipe "boost::source"
+    chef.add_recipe 'boost'
+    chef.add_recipe 'boost::source'
   end
-
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.

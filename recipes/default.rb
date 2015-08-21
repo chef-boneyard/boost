@@ -17,10 +17,10 @@
 # limitations under the License.
 
 case node['platform_family']
-when "rhel","fedora"
-  %w{boost boost-devel boost-doc}.each do |pkg|
+when 'rhel', 'fedora'
+  %w(boost boost-devel boost-doc).each do |pkg|
     package pkg
   end
-when "debian"
-  package "libboost-dev"
+when 'debian'
+  package 'libboost-dev'
 end
