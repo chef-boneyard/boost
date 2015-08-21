@@ -1,5 +1,9 @@
-Description
-===========
+boost Cookbook
+==============
+
+[![Build Status](https://travis-ci.org/opscode-cookbooks/boost.svg?branch=master)](https://travis-ci.org/opscode-cookbooks/boost)
+[![Cookbook Version](https://img.shields.io/cookbook/v/boost.svg)](https://supermarket.chef.io/cookbooks/boost)
+
 
 Installs boost, mainly to support Thrift.
 
