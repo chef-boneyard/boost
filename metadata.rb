@@ -15,4 +15,4 @@ recommends 'build-essential'
 end
 
 source_url 'https://github.com/opscode-cookbooks/boost' if respond_to?(:source_url)
-issues_url 'https://github.com/opscode-cookbooks/boost/issues' if respond_to?(:source_url)
+issues_url 'https://github.com/opscode-cookbooks/boost/issues' if respond_to?(:issues_url)
