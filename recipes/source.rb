@@ -26,7 +26,7 @@ end
 cookbook_file '/etc/ld.so.conf.d/boost.conf' do
   owner 'root'
   group 'root'
-  mode 00644
+  mode '0644'
   source 'boost.conf'
   backup false
   notifies :run, 'execute[ldconfig]', :immediately
