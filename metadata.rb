@@ -2,7 +2,7 @@ name 'boost'
 maintainer 'Chef Software, Inc.'
 maintainer_email 'cookbooks@chef.io'
 license 'Apache 2.0'
-description 'Installs libboost'
+description 'Installs the Boost C++ Libraries'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version '0.2.0'
 provides 'boost'
