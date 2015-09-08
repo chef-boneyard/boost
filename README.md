@@ -12,7 +12,15 @@ Requirements
 
 ## Platform:
 
-* Ubuntu 10.04
+* Ubuntu / Debian and derivatives
+* RHEL / Fedora and derivatives
+
+## Chef
+* Chef 11+
+
+## Cookbooks
+* None
+
 
 Usage
 =====
