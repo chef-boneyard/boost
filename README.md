@@ -5,7 +5,7 @@ boost Cookbook
 [![Cookbook Version](https://img.shields.io/cookbook/v/boost.svg)](https://supermarket.chef.io/cookbooks/boost)
 
 
-Installs boost, mainly to support Thrift.
+Installs the [Boost C++ Libraries](http://www.boost.org/)
 
 Requirements
 ============
@@ -19,7 +19,7 @@ Requirements
 * Chef 11+
 
 ## Cookbooks
-* None
+* Recommends build-essential for the source install recipe
 
 
 Usage
