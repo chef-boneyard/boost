@@ -10,7 +10,7 @@ recipe 'boost', 'Installs libboost-dev'
 
 recommends 'build-essential'
 
-%w(ubuntu debian redhat centos suse scientific oracle amazon).each do |os|
+%w(ubuntu debian redhat centos scientific oracle amazon).each do |os|
   supports os
 end
 
