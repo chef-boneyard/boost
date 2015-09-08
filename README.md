@@ -1,7 +1,7 @@
 boost Cookbook
 ==============
 
-[![Build Status](https://travis-ci.org/opscode-cookbooks/boost.svg?branch=master)](https://travis-ci.org/opscode-cookbooks/boost)
+[![Build Status](https://travis-ci.org/chef-cookbooks/boost.svg?branch=master)](https://travis-ci.org/chef-cookbooks/boost)
 [![Cookbook Version](https://img.shields.io/cookbook/v/boost.svg)](https://supermarket.chef.io/cookbooks/boost)
 
 
