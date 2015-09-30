@@ -8,7 +8,7 @@ version '0.2.0'
 provides 'boost'
 recipe 'boost', 'Installs libboost-dev'
 
-recommends 'build-essential'
+depends 'build-essential'
 
 %w(ubuntu debian redhat centos scientific oracle amazon).each do |os|
   supports os

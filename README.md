@@ -19,7 +19,7 @@ Requirements
 * Chef 11+
 
 ## Cookbooks
-* Recommends build-essential for the source install recipe
+* build-essential for the source install recipe
 
 
 Usage
