@@ -7,38 +7,36 @@ boost Cookbook
 
 Installs the [Boost C++ Libraries](http://www.boost.org/)
 
+
 Requirements
-============
+------------
+#### Platforms
+- Debian/Ubuntu
+- RHEL/CentOS/Scientific/Amazon/Oracle
 
-## Platform:
+#### Chef
+- Chef 11+
 
-* Ubuntu / Debian and derivatives
-* RHEL / Fedora and derivatives
-
-## Chef
-* Chef 11+
-
-## Cookbooks
-* build-essential for the source install recipe
+#### Cookbooks
+- build-essential for the source install recipe
 
 
 Usage
-=====
-
+-----
 Include this recipe to install boost development packages.
 
     include_recipe "boost"
 
 Merely installs the libboost-dev package which should grab a bunch of dependencies and get the right thing.
 
-License and Author
-==================
 
-Author:: Joshua Timberman (<joshua@chef.io>)
+License & Authors
+-----------------
+**Author:** Cookbook Engineering Team (<cookbooks@chef.io>)
 
-```text
-Copyright 2009-2015, Chef Software, Inc.
+**Copyright:** 2009-2015, Chef Software, Inc.
 
+```
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
