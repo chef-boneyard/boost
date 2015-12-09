@@ -12,7 +12,7 @@ bash 'install-boost' do
   user 'root'
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
-  tar xzvf #{node['boost']['file']}
+  tar xzf #{node['boost']['file']}
   cd #{node['boost']['build_dir']}
   ./bootstrap.sh && ./bjam install
   EOH
