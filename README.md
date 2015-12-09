@@ -7,6 +7,7 @@ Installs the [Boost C++ Libraries](http://www.boost.org/)
 ### Platforms
 - Debian/Ubuntu
 - RHEL/CentOS/Scientific/Amazon/Oracle
+- Fedora
 
 ### Chef
 - Chef 11+
