@@ -1,5 +1,7 @@
 include_recipe 'build-essential'
 
+package 'tar'
+
 remote_file "#{Chef::Config[:file_cache_path]}/#{node['boost']['file']}" do
   source node['boost']['source'] + node['boost']['file']
   mode '0644'
