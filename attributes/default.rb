@@ -23,5 +23,5 @@ default['boost']['build_dir'] = 'boost_1_60_0'
 default['boost']['source_install_deps'] = if platform_family?('debian')
                                             %w(libbz2-dev python-dev tar)
                                           else
-                                            %w(tar)
+                                            %w(bzip2-devel python-devel tar)
                                           end
