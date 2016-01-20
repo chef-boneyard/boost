@@ -1,6 +1,8 @@
 include_recipe 'build-essential'
 
-package 'tar'
+node['boost']['source_install_deps'].each do |pkg|
+  package pkg
+end
 
 remote_file "#{Chef::Config[:file_cache_path]}/#{node['boost']['file']}" do
   source node['boost']['source'] + node['boost']['file']
@@ -16,7 +18,7 @@ bash 'install-boost' do
   cd #{node['boost']['build_dir']}
   ./bootstrap.sh && ./bjam install
   EOH
-  not_if '/sbin/ldconfig -v | grep boost'
+  not_if '[ -d /usr/local/share/boost/ ] && ( /sbin/ldconfig -v | grep boost )'
 end
 
 execute 'ldconfig' do

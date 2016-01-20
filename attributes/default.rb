@@ -2,7 +2,7 @@
 # Cookbook Name:: boost
 # Attributes:: default
 #
-# Copyright 2009-2015, Chef Software, Inc.
+# Copyright 2009-2016, Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,6 +17,11 @@
 # limitations under the License.
 #
 
-default['boost']['source'] = 'http://sourceforge.net/projects/boost/files/boost/1.59.0/'
-default['boost']['file'] = 'boost_1_59_0.tar.gz'
-default['boost']['build_dir'] = 'boost_1_59_0'
+default['boost']['source'] = 'http://sourceforge.net/projects/boost/files/boost/1.60.0/'
+default['boost']['file'] = 'boost_1_60_0.tar.gz'
+default['boost']['build_dir'] = 'boost_1_60_0'
+default['boost']['source_install_deps'] = if platform_family?('debian')
+                                            %w(libbz2-dev python-dev tar)
+                                          else
+                                            %w(tar)
+                                          end
