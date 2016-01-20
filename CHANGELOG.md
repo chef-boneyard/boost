@@ -1,6 +1,13 @@
 # boost Cookbook CHANGELOG
 This file is used to list changes made in each version of the boost cookbook.
 
+## v1.1.0 (2016-01-20)
+- Added a new attribute for source install dep packages. This fixed failing source installs
+- Bump to boost 1.60
+- Fix the guard around the compilation to not trigger on default Ubuntu installs
+- Added Serverspec tests
+- Testing in Travis CI with docker for full integration tests
+
 ## v1.0.0 (2015-10-20)
 - Updated to the latest boost files (1.59 vs. 1.51)
 - Changed recommends -> depends in the metadata for build-essential since recommends does nothing

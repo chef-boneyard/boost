@@ -4,8 +4,7 @@ maintainer_email 'cookbooks@chef.io'
 license 'Apache 2.0'
 description 'Installs the Boost C++ Libraries'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '1.0.0'
-provides 'boost'
+version '1.1.0'
 recipe 'boost', 'Installs libboost-dev'
 
 depends 'build-essential'
