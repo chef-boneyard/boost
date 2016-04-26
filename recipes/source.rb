@@ -10,10 +10,11 @@ remote_file "#{Chef::Config[:file_cache_path]}/#{node['boost']['file']}" do
   action :create_if_missing
 end
 
-bash 'install-boost' do
+execute 'install-boost' do
   user 'root'
   cwd Chef::Config[:file_cache_path]
-  code <<-EOH
+  live_stream true if Chef::Resource::Execute.method_defined?(:live_stream)
+  command <<-EOH
   tar xzf #{node['boost']['file']}
   cd #{node['boost']['build_dir']}
   ./bootstrap.sh && ./bjam install
