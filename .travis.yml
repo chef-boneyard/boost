@@ -17,13 +17,11 @@ env:
   - INSTANCE=default-centos-7
   - INSTANCE=default-ubuntu-1204
   - INSTANCE=default-ubuntu-1404
-  # disabling these until we can stream output as it takes longer than
-  # 10 minutes to compile and travis kills the job
-  # - INSTANCE=source-centos-5
-  # - INSTANCE=source-centos-6
-  # - INSTANCE=source-centos-7
-  # - INSTANCE=source-ubuntu-1204
-  # - INSTANCE=source-ubuntu-1404
+  - INSTANCE=source-centos-5
+  - INSTANCE=source-centos-6
+  - INSTANCE=source-centos-7
+  - INSTANCE=source-ubuntu-1204
+  - INSTANCE=source-ubuntu-1404
 
 # Don't `bundle install`
 install: echo "skip bundle install"
