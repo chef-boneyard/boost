@@ -10,7 +10,7 @@ remote_file "#{Chef::Config[:file_cache_path]}/#{node['boost']['file']}" do
   action :create_if_missing
 end
 
-execute 'install-boost' do
+execute 'install-boost' do # ~FC009
   user 'root'
   cwd Chef::Config[:file_cache_path]
   live_stream true if Chef::Resource::Execute.method_defined?(:live_stream)
