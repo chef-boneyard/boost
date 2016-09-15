@@ -10,7 +10,7 @@ Installs the [Boost C++ Libraries](http://www.boost.org/)
 - Fedora
 
 ### Chef
-- Chef 11+
+- Chef 12.1+
 
 ### Cookbooks
 - build-essential for the source install recipe
@@ -27,7 +27,7 @@ Merely installs the libboost-dev package which should grab a bunch of dependenci
 ## License & Authors
 **Author:** Cookbook Engineering Team ([cookbooks@chef.io](mailto:cookbooks@chef.io))
 
-**Copyright:** 2009-2015, Chef Software, Inc.
+**Copyright:** 2009-2016, Chef Software, Inc.
 
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
