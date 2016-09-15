@@ -1,6 +1,12 @@
 # boost Cookbook CHANGELOG
 This file is used to list changes made in each version of the boost cookbook.
 
+## 2.0.0 (2016-09-15)
+- Live stream the compilation for source installs
+- Disable FC009
+- Testing updates
+- Require Chef 12.1
+
 ## v1.1.0 (2016-01-20)
 - Added a new attribute for source install dep packages. This fixed failing source installs
 - Bump to boost 1.60
