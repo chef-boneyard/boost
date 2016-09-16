@@ -1,8 +1,6 @@
 include_recipe 'build-essential'
 
-node['boost']['source_install_deps'].each do |pkg|
-  package pkg
-end
+package node['boost']['source_install_deps']
 
 remote_file "#{Chef::Config[:file_cache_path]}/#{node['boost']['file']}" do
   source node['boost']['source'] + node['boost']['file']

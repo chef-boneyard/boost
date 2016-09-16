@@ -18,8 +18,7 @@
 
 case node['platform_family']
 when 'rhel', 'fedora'
-  %w(boost boost-devel boost-doc).each do |pkg|
-    package pkg
+  package %w(boost boost-devel boost-doc)
   end
 when 'debian'
   package 'libboost-dev'
