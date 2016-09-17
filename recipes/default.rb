@@ -19,7 +19,6 @@
 case node['platform_family']
 when 'rhel', 'fedora'
   package %w(boost boost-devel boost-doc)
-  end
 when 'debian'
   package 'libboost-dev'
 end
