@@ -1,6 +1,11 @@
 # boost Cookbook CHANGELOG
 This file is used to list changes made in each version of the boost cookbook.
 
+## 2.1.0 (2016-10-24)
+- Use multipackage installs to speed up runs
+- Convert integration testing to inspec
+- Update chefspec for better unit testing output
+
 ## 2.0.0 (2016-09-15)
 - Live stream the compilation for source installs
 - Disable FC009
