@@ -1,21 +1,27 @@
 # boost Cookbook
+
 [![Build Status](https://travis-ci.org/chef-cookbooks/boost.svg?branch=master)](https://travis-ci.org/chef-cookbooks/boost) [![Cookbook Version](https://img.shields.io/cookbook/v/boost.svg)](https://supermarket.chef.io/cookbooks/boost)
 
 Installs the [Boost C++ Libraries](http://www.boost.org/)
 
 ## Requirements
+
 ### Platforms
+
 - Debian/Ubuntu
 - RHEL/CentOS/Scientific/Amazon/Oracle
 - Fedora
 
 ### Chef
+
 - Chef 12.1+
 
 ### Cookbooks
+
 - build-essential for the source install recipe
 
 ## Usage
+
 Include this recipe to install boost development packages.
 
 ```
@@ -25,6 +31,7 @@ include_recipe "boost"
 Merely installs the libboost-dev package which should grab a bunch of dependencies and get the right thing.
 
 ## License & Authors
+
 **Author:** Cookbook Engineering Team ([cookbooks@chef.io](mailto:cookbooks@chef.io))
 
 **Copyright:** 2009-2016, Chef Software, Inc.
